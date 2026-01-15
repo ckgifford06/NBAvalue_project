@@ -1,4 +1,4 @@
-# NBA Player Value Analysis: Finding the Most Undervalued Players
+# Finding the Most Undervalued Players in the NBA From 2022-2025
 
 A data analytics project that identifies undervalued NBA players by analyzing their performance metrics relative to their salaries (2022-2024 seasons).
 
