@@ -1,15 +1,12 @@
 import pandas as pd
 
-# Load player stats
 stats_df = pd.read_csv('data/player_stats.csv')
 
-# Load cleaned salaries
 salary_df = pd.read_csv('data/nba_salaries_cleaned.csv')
 
 print(f"Stats data: {len(stats_df)} rows")
 print(f"Salary data: {len(salary_df)} rows")
 
-# Merge stats with salaries on player name and season
 merged_df = stats_df.merge(
     salary_df[['PLAYER_NAME', 'SEASON_ID', 'Salary']], 
     on=['PLAYER_NAME', 'SEASON_ID'],
@@ -18,7 +15,6 @@ merged_df = stats_df.merge(
 
 print(f"\nMerged data: {len(merged_df)} rows")
 
-# Calculate per-game stats
 merged_df['PPG'] = merged_df['PTS'] / merged_df['GP']
 merged_df['RPG'] = merged_df['REB'] / merged_df['GP']
 merged_df['APG'] = merged_df['AST'] / merged_df['GP']
@@ -26,24 +22,22 @@ merged_df['SPG'] = merged_df['STL'] / merged_df['GP']
 merged_df['BPG'] = merged_df['BLK'] / merged_df['GP']
 merged_df['MPG'] = merged_df['MIN'] / merged_df['GP']
 
-# Create a composite stat score
 merged_df['COMPOSITE_SCORE'] = (
-    merged_df['PPG'] * 1.0 +      # Points
-    merged_df['RPG'] * 1.2 +      # Rebounds
-    merged_df['APG'] * 1.5 +      # Assists
-    merged_df['SPG'] * 2.0 +      # Steals
-    merged_df['BPG'] * 2.0        # Blocks
+    merged_df['PPG'] * 1.0 +      
+    merged_df['RPG'] * 1.2 +     
+    merged_df['APG'] * 1.5 +      
+    merged_df['SPG'] * 2.0 +      
+    merged_df['BPG'] * 2.0        
 )
 
-# Calculate value: Composite score per million dollars
 merged_df['VALUE_SCORE'] = merged_df['COMPOSITE_SCORE'] / (merged_df['Salary'] / 1_000_000)
 
-# Filter to qualified players (at least 40 games AND 20+ minutes per game)
+
 qualified = merged_df[(merged_df['GP'] >= 40) & (merged_df['MPG'] >= 20)]
 
 print(f"\nQualified players (40+ games, 20+ MPG): {len(qualified)}")
 
-# Sort ALL qualified players by value score (descending)
+
 all_undervalued = qualified.sort_values('VALUE_SCORE', ascending=False)
 
 print("\n" + "="*80)
@@ -54,11 +48,10 @@ print(all_undervalued[[
     'COMPOSITE_SCORE', 'Salary', 'VALUE_SCORE'
 ]].to_string(index=False))
 
-# Save results
+
 all_undervalued.to_csv('data/undervalued_players_comprehensive.csv', index=False)
 print("\nFull results saved to data/undervalued_players_comprehensive.csv")
 
-# Show some interesting stats
 print("\n" + "="*80)
 print("SUMMARY STATISTICS")
 print("="*80)
@@ -68,7 +61,6 @@ print(f"Average MPG: {qualified['MPG'].mean():.1f}")
 print(f"Average composite score: {qualified['COMPOSITE_SCORE'].mean():.2f}")
 print(f"Average value score: {qualified['VALUE_SCORE'].mean():.2f}")
 
-# Most efficient player (highest value score)
 print("\n" + "="*80)
 print("MOST EFFICIENT PLAYER")
 print("="*80)
@@ -81,7 +73,7 @@ print(f"  Composite Score: {most_efficient['COMPOSITE_SCORE']:.2f}")
 print(f"  Salary: ${most_efficient['Salary']:,.0f}")
 print(f"  Value Score: {most_efficient['VALUE_SCORE']:.2f}")
 
-# Least valuable player (lowest value score)
+
 print("\n" + "="*80)
 print("LEAST VALUABLE PLAYER")
 print("="*80)
