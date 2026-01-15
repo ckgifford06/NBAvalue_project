@@ -4,20 +4,22 @@ A data analytics project that identifies undervalued NBA players by analyzing th
 
 ## Project Overview
 
-This project uses the NBA API and salary data to calculate a comprehensive "value score" for NBA players, revealing which players provide the best performance per dollar spent. The analysis considers multiple statistics including points, rebounds, assists, steals, and blocks.
+This project uses the NBA API and salary data to calculate a comprehensive "value score" for NBA players, revealing which players provide the best performance per dollar spent. The analysis considers multiple statistics including points, rebounds, assists, steals, blocks, minutes, and games played.
 
 
 
-## 📈 Visualization
+## Visualization
 
 ![Player Value Analysis](player_value_detailed.png)
 
 *Green dots indicate undervalued players (high performance relative to salary), while red dots indicate overvalued players (low performance relative to salary).*
 
+Here, you ideally want to be in the top left quadrant (or to the left of the imaginary line of best fit) of the graph.
+
 ## Methodology
 
 ### Data Sources
-- **Player Statistics**: NBA API (`nba_api` Python package)
+- **Player Statistics**: https://www.kaggle.com/datasets/omarsobhy14/nba-players-salaries, https://www.kaggle.com/datasets/thedevastator/exploring-nba-player-performance-and-salaries-19
 - **Salary Data**: NBA player salaries (2022-2024)
 
 
