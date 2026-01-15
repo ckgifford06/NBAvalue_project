@@ -101,13 +101,7 @@ MOST EFFICIENT PLAYER
 _____________________
 LEAST VALUABLE PLAYER
 ---------------------
-2024-25 Deandre Ayton
-  MPG: 30.1
-  PPG: 14.4, RPG: 10.2, APG: 1.6
-  SPG: 0.8, BPG: 1.0
-  Composite Score: 32.48
-  Salary: $34,005,126
-  Value Score: 0.96
+2024-25 Deandre Ayton | MPG: 30.1 | PPG: 14.4 | RPG: 10.2 | APG: 1.6 | SPG: 0.8 | BPG: 1.0 | Composite Score: 32.48 | Salary: $34,005,126 | Value Score: 0.96
 
 
 ## Insights
