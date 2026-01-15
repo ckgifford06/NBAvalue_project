@@ -3,7 +3,7 @@ import pandas as pd
 # Load data
 df = pd.read_csv('data/undervalued_players_comprehensive.csv')
 
-print("## 📊 All Qualified Players Ranked by Value\n")
+print("##  All Qualified Players Ranked by Value\n")
 print("| Rank | Player Name | Season | MPG | PPG | RPG | APG | SPG | BPG | Salary | Value Score |")
 print("|------|-------------|--------|-----|-----|-----|-----|-----|-----|--------|-------------|")
 
