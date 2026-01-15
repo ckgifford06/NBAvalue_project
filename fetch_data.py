@@ -22,7 +22,6 @@ for i, player in enumerate(all_players[:20]):
         stats_df['PLAYER_NAME'] = player['full_name']
         all_stats.append(stats_df)
         
-        # Be nice to the API - wait between requests
         time.sleep(0.6)
     except Exception as e:
         print(f"Error fetching {player['full_name']}: {e}")
