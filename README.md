@@ -21,7 +21,7 @@ This project uses the NBA API and salary data to calculate a comprehensive "valu
 - **Salary Data**: NBA player salaries (2022-2024)
 
 
-## Sample Results
+# Sample Results
 
 Stats data: 157 rows
 Salary data: 1214 rows
@@ -30,9 +30,8 @@ Merged data: 47 rows
 
 Qualified players (40+ games, 20+ MPG): 35
 
-================================================================================
 ALL QUALIFIED PLAYERS RANKED BY VALUE (40+ GP, 20+ MPG)
-================================================================================
+
 
              PLAYER_NAME SEASON_ID       MPG       PPG       RPG      APG      SPG      BPG  COMPOSITE_SCORE     Salary  VALUE_SCORE
            Jose Alvarado   2022-23 21.475410  9.016393  2.311475 3.049180 1.098361 0.163934        18.888525  1563518.0    12.080785
@@ -73,18 +72,18 @@ Nickeil Alexander-Walker   2023-24 23.426829  7.987805  2.036585 2.487805 0.7804
 
 Full results saved to data/undervalued_players_comprehensive.csv
 
-================================================================================
+
 SUMMARY STATISTICS
-================================================================================
+
 Total qualified players: 35
 Average salary: $16,327,634
 Average MPG: 28.4
 Average composite score: 29.64
 Average value score: 3.29
 
-================================================================================
+
 MOST EFFICIENT PLAYER
-================================================================================
+
 2022-23 Jose Alvarado
   MPG: 21.5
   PPG: 9.0, RPG: 2.3, APG: 3.0
@@ -93,9 +92,9 @@ MOST EFFICIENT PLAYER
   Salary: $1,563,518
   Value Score: 12.08
 
-================================================================================
+
 LEAST VALUABLE PLAYER
-================================================================================
+
 2024-25 Deandre Ayton
   MPG: 30.1
   PPG: 14.4, RPG: 10.2, APG: 1.6
