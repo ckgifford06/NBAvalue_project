@@ -90,13 +90,7 @@ Average value score: 3.29
 _____________________
 MOST EFFICIENT PLAYER
 ---------------------
-2022-23 Jose Alvarado
-  MPG: 21.5
-  PPG: 9.0, RPG: 2.3, APG: 3.0
-  SPG: 1.1, BPG: 0.2
-  Composite Score: 18.89
-  Salary: $1,563,518
-  Value Score: 12.08
+2022-23 Jose Alvarado | MPG: 21.5 | PPG: 9.0 | RPG: 2.3 | APG: 3.0 | SPG: 1.1 | BPG: 0.2 | Composite Score: 18.89 | Salary: $1,563,518 | Value Score: 12.08
 
 _____________________
 LEAST VALUABLE PLAYER
