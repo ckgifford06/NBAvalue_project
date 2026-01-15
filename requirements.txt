@@ -1,0 +1,7 @@
+nba_api
+pandas
+matplotlib
+seaborn
+requests
+beautifulsoup4
+lxml
