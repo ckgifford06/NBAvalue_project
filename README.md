@@ -78,18 +78,18 @@ ALL QUALIFIED PLAYERS RANKED BY VALUE (40+ GP, 20+ MPG)
 
 Full results saved to data/undervalued_players_comprehensive.csv
 
-
+__________________
 SUMMARY STATISTICS
-
+------------------
 Total qualified players: 35
 Average salary: $16,327,634
 Average MPG: 28.4
 Average composite score: 29.64
 Average value score: 3.29
 
-
+_____________________
 MOST EFFICIENT PLAYER
-
+---------------------
 2022-23 Jose Alvarado
   MPG: 21.5
   PPG: 9.0, RPG: 2.3, APG: 3.0
@@ -98,9 +98,9 @@ MOST EFFICIENT PLAYER
   Salary: $1,563,518
   Value Score: 12.08
 
-
+_____________________
 LEAST VALUABLE PLAYER
-
+---------------------
 2024-25 Deandre Ayton
   MPG: 30.1
   PPG: 14.4, RPG: 10.2, APG: 1.6
@@ -110,7 +110,7 @@ LEAST VALUABLE PLAYER
   Value Score: 0.96
 
 
-## 📝 Insights
+## Insights
 
 - Players on rookie contracts tend to provide exceptional value
 - Guard positions often show higher value scores due to assists and steals
