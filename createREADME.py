@@ -1,6 +1,6 @@
 import pandas as pd
 
-# Load data
+
 df = pd.read_csv('data/undervalued_players_comprehensive.csv')
 
 print("##  All Qualified Players Ranked by Value\n")
