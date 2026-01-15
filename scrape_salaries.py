@@ -14,7 +14,6 @@ print(f"Status code: {response.status_code}")
 if response.status_code == 200:
     soup = BeautifulSoup(response.content, 'html.parser')
     
-    # Find all tables
     all_tables = soup.find_all('table')
     print(f"\nFound {len(all_tables)} tables")
     
@@ -23,12 +22,11 @@ if response.status_code == 200:
         print(f"  Class: {table.get('class')}")
         print(f"  ID: {table.get('id')}")
         
-        # Try to extract from first table
         if i == 0:
             rows = []
             tbody = table.find('tbody')
             if tbody:
-                for tr in tbody.find_all('tr')[:5]:  # Just first 5 rows
+                for tr in tbody.find_all('tr')[:5]:
                     cols = [td.text.strip() for td in tr.find_all('td')]
                     if cols:
                         rows.append(cols)
